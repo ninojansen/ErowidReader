@@ -53,6 +53,7 @@ public class ReportTileListAdapter extends RecyclerView.Adapter<RecyclerView.Vie
                             onLoadMoreListener.onLoadMore();
                         }
                     }
+
                 }
             });
         }
