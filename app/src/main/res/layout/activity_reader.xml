@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:background="@color/primary"
+            android:theme="?attr/actionBarTheme"
+            android:elevation="@dimen/activity_vertical_margin"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/reader_toolbar"/>
+
+    <android.support.v4.widget.ContentLoadingProgressBar
+            android:id="@+id/contentLoadingBar"
+            style="?android:progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:layout_marginTop="-10dp"
+            android:indeterminate="true"
+            android:visibility="invisible"/>
+    <ScrollView
+            android:id="@+id/reader_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:id="@+id/reader_body"
+                    android:layout_marginRight="8dp"
+                    android:textIsSelectable="true"
+                    app:layout_constraintRight_toRightOf="parent" android:layout_marginLeft="8dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:textAppearance="@android:style/TextAppearance.Material.Body1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/dose_chart_table"
+            />
+            <TextView
+                    android:textIsSelectable="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/reader_weight"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/reader_pubDate"
+                    android:textAppearance="@android:style/TextAppearance.Material" android:textAlignment="textEnd"
+                    android:layout_marginRight="8dp" app:layout_constraintRight_toRightOf="parent"/>
+            <TextView
+                    android:textIsSelectable="true"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/reader_views"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp" app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/reader_expYear" android:layout_marginLeft="8dp"
+                    app:layout_constraintHorizontal_bias="1.0" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/reader_weight" android:layout_marginStart="8dp"
+                    android:textAppearance="@android:style/TextAppearance.Material" android:textAlignment="textEnd"/>
+            <TextView
+                    android:textIsSelectable="true"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/reader_pubDate"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/reader_author" android:layout_marginRight="8dp"
+                    app:layout_constraintRight_toRightOf="parent" android:layout_marginLeft="8dp"
+                    app:layout_constraintLeft_toLeftOf="parent" android:layout_marginStart="8dp"
+                    android:textAppearance="@android:style/TextAppearance.Material" android:textAlignment="center"/>
+            <TextView
+                    android:textIsSelectable="true"
+
+                    android:id="@+id/reader_age_gender"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textAppearance="@android:style/TextAppearance.Material"
+                    android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/reader_pubDate"
+                    app:layout_constraintRight_toLeftOf="@+id/reader_weight"
+                    app:layout_constraintHorizontal_chainStyle="spread" android:layout_marginLeft="8dp"
+                    android:layout_marginRight="0dp" app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0" android:textAlignment="textStart"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/reader_expYear"
+                    android:layout_marginLeft="8dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/reader_age_gender"
+                    android:textAppearance="@android:style/TextAppearance.Material" android:textAlignment="textStart"/>
+            <TextView
+                    android:textIsSelectable="true"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/reader_author"
+                    android:layout_marginTop="13dp"
+                    app:layout_constraintTop_toBottomOf="@+id/reader_substance" android:layout_marginRight="8dp"
+                    app:layout_constraintRight_toRightOf="parent" android:layout_marginLeft="8dp"
+                    app:layout_constraintLeft_toLeftOf="parent" android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:textAppearance="@android:style/TextAppearance.Material" android:textAlignment="center"/>
+            <TextView
+
+                    android:textIsSelectable="true"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/reader_substance"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/reader_title" android:layout_marginLeft="8dp"
+                    app:layout_constraintLeft_toLeftOf="parent" android:layout_marginRight="8dp"
+                    app:layout_constraintRight_toRightOf="parent" android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:textAppearance="@android:style/TextAppearance.Material"
+                    android:textAlignment="center"/>
+            <TextView
+                    android:textIsSelectable="true"
+
+                    android:layout_width="wrap_content"
+                    android:id="@+id/reader_title"
+                    android:layout_marginRight="8dp" app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginLeft="8dp" app:layout_constraintLeft_toLeftOf="parent"
+                    android:textAppearance="@android:style/TextAppearance.Material.Title"
+                    android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
+                    app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="8dp"
+                    android:textAlignment="center" android:layout_height="wrap_content"/>
+
+
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:id="@+id/dose_chart_table"
+                         android:orientation="vertical"
+                         android:textIsSelectable="true"
+
+                         app:layout_constraintRight_toRightOf="parent"
+                         app:layout_constraintLeft_toLeftOf="parent"
+                         app:layout_constraintHorizontal_bias="0.0"
+                         app:layout_constraintTop_toBottomOf="@+id/reader_expYear">
+            </TableLayout>
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

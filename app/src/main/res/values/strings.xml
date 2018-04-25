@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">ErowidApp</string>
+    <string name="search">Search</string>
+    <string name="action_settings">settings</string>
+    <string name="experiences">Experiences</string>
+    <string name="toolbar_title">Erowid Reader</string>
+    <string name="srch">Search</string>
+    <string name="web">Web</string>
+    <string name="databasePrefs">DatabasePrefs</string>
+    <string name="lastSubstanceRefreshTimeKey">SubstanceRefreshTimeKey</string>
+    <string-array
+            name="drawer_elements">
+        <item>Chemicals</item>
+        <item>Experiences</item>
+        <item>Placeholder</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_width="match_parent" android:layout_height="wrap_content" tools:layout_editor_absoluteY="25dp"
+        tools:layout_editor_absoluteX="0dp">
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/ic_star_blue_a700_24dp"
+            android:id="@+id/report_card_star1"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/report_card_substances"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="8dp"
+            app:layout_constraintVertical_bias="1.0" android:layout_marginRight="67dp"
+            app:layout_constraintRight_toRightOf="parent" android:layout_marginEnd="8dp" android:scaleX="0.75"
+            android:scaleY="0.75"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/ic_star_blue_a700_24dp"
+            android:id="@+id/report_card_star2"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/report_card_substances"
+            app:layout_constraintRight_toLeftOf="@+id/report_card_star1" android:layout_marginRight="16dp"
+            android:layout_marginEnd="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp" app:layout_constraintVertical_bias="0.0" android:scaleX="0.75"
+            android:scaleY="0.75"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/ic_star_blue_a700_24dp"
+            android:id="@+id/report_card_star3"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/report_card_substances"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp" app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintRight_toLeftOf="@+id/report_card_star2" android:layout_marginRight="67dp"
+            android:adjustViewBounds="false" android:scaleX="0.75" android:scaleY="0.75"
+            android:layout_marginEnd="8dp"/>
+    <TextView
+            android:text="Wonder Incident and Impressionism LohgfgaDSGFHJ"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/report_card_title"
+            android:textAppearance="@android:style/TextAppearance.Material.Subhead"
+            android:layout_marginStart="8dp" android:layout_marginEnd="32dp"
+            android:maxLines="2" android:ellipsize="end"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp" android:layout_marginLeft="8dp" app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/report_card_new" android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.0"/>
+    <TextView
+            android:text="Mushrooms - P. cubensis, LSD, 2C-B, MDMA (Ecstasy), DMT, Ketamine, Mescaline  Cannabis"
+            android:layout_height="wrap_content"
+            android:id="@+id/report_card_substances"
+            android:ellipsize="end"
+            android:layout_width="0dp"
+            android:textAppearance="@android:style/TextAppearance.Material" android:textSize="12sp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/report_card_title"
+            app:layout_constraintLeft_toLeftOf="@+id/report_card_title"
+            app:layout_constraintRight_toRightOf="@+id/report_card_title" android:maxLines="2"
+            app:layout_constraintHorizontal_bias="0.0"
+    />
+    <TextView
+            android:text="Nov 30 2017"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/report_card_date"
+            android:layout_marginStart="8dp"
+            android:textSize="12sp"
+            android:layout_marginLeft="8dp" app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/report_card_substances"
+            app:layout_constraintVertical_bias="0.5"/>
+    <TextView
+            android:text="by Author"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/report_card_author"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@+id/report_card_substances"
+            app:layout_constraintLeft_toRightOf="@+id/report_card_date" android:layout_marginLeft="8dp"
+            app:layout_constraintRight_toLeftOf="@+id/report_card_star3" android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="8dp"
+            app:layout_constraintHorizontal_bias="0.0" android:maxLines="1"/>
+    <TextView
+            android:text="New"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/report_card_new"
+            android:textAppearance="@android:style/TextAppearance.Material.Notification"
+            android:textColor="?android:attr/colorPressedHighlight" android:textStyle="bold"
+            android:textAllCaps="true" android:textAlignment="textEnd"
+            android:visibility="visible" android:layout_marginRight="2dp"
+            app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/report_card_substances" android:layout_marginEnd="8dp"
+            app:layout_constraintVertical_bias="0.0"/>
+    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:id="@+id/guideline2" app:layout_constraintGuide_begin="20dp"
+                                          android:orientation="vertical"/>
+</android.support.constraint.ConstraintLayout>
