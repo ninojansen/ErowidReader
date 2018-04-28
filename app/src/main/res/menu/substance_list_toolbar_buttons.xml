@@ -16,4 +16,8 @@
           android:title="Sort"
           app:showAsAction="always"/>
 
+    <item android:id="@+id/substance_list_report_count_order"
+          android:icon="@drawable/ic_swap_vert_black_24dp"
+          android:title="orderHightoLow"
+          app:showAsAction="always"/>
 </menu>

@@ -154,9 +154,13 @@ public class SubstanceListFragment extends Fragment {
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.substance_list_sort:
-
                 if (mAdapter != null) {
                     mAdapter.sortAlphabetically();
+                }
+                return true;
+            case R.id.substance_list_report_count_order:
+                if (mAdapter != null) {
+                    mAdapter.sortReportCount();
                 }
                 return true;
             default:

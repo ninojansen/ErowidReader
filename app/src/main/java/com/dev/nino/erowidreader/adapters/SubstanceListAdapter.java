@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +38,7 @@ public class SubstanceListAdapter extends RecyclerView.Adapter<SubstanceListAdap
     private int animationThreshold = 2;
     private boolean stopAnimation;
     private boolean sortedAlphabetically = false;
+    private boolean sortedReportCountAscending = false;
 
     public SubstanceListAdapter(ArrayList<Substance> substances, SubstanceListFragment fragment) {
         this.substances = new ArrayList<>(substances);
@@ -150,6 +152,28 @@ public class SubstanceListAdapter extends RecyclerView.Adapter<SubstanceListAdap
                 });
             }
             sortedAlphabetically = true;
+        }
+        notifyDataSetChanged();
+    }
+
+    public void sortReportCount() {
+        if (sortedReportCountAscending) {
+            Collections.sort(substances, new Comparator<Substance>() {
+                @Override
+                public int compare(final Substance object1, final Substance object2) {
+                    return object1.getReportCount() - object2.getReportCount(); // Ascending
+                }
+            });
+            sortedReportCountAscending = false;
+        }
+        else {
+            Collections.sort(substances, new Comparator<Substance>() {
+                @Override
+                public int compare(final Substance object1, final Substance object2) {
+                    return object2.getReportCount() - object1.getReportCount(); // Ascending
+                }
+            });
+            sortedReportCountAscending = true;
         }
         notifyDataSetChanged();
     }
