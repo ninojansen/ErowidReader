@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         configureToolbar();
         configureNavigationDrawer();
+
         /* For testing reader:
         Intent reader = new Intent(this, ReaderActivity.class);
         reader.putExtra("url", "https://erowid.org/experiences/exp.php?ID=70283");
